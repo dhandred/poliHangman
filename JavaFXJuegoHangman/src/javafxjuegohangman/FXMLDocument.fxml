@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxjuegohangman.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="Menu" layoutX="21.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="715.0" fitWidth="1049.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Menu.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="645.0" fitWidth="939.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Menu.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="72.0" layoutY="237.0" mnemonicParsing="false" onAction="#ModoDeJuegoOnePlayer" prefHeight="187.0" prefWidth="297.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="187.0" fitWidth="357.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/OnePlayer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="462.0" layoutY="356.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="174.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/TwoPlayer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="94.0" layoutY="487.0" mnemonicParsing="false" onAction="#InstruccionesM" prefHeight="154.0" prefWidth="219.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="158.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Instrucciones.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="964.0" layoutY="32.0" mnemonicParsing="false" onAction="#ButtonExit" style="-fx-background-color: #fdcb6e;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ModoUnJugador" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="697.0" fitWidth="1063.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/SubMenu.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="88.0" layoutY="207.0" mnemonicParsing="false" onAction="#irDeporteJugar" prefHeight="99.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="216.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="585.0" layoutY="242.0" mnemonicParsing="false" onAction="#IrIdiomasJugar" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="239.0" fitWidth="368.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SubMenuidiomas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="417.0" layoutY="528.0" mnemonicParsing="false" onAction="#VolverMenu" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Volver.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Deportes" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="697.0" fitWidth="1049.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.5" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Deportes%20UnJugador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="835.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/UnJugador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="166.0" fitWidth="253.0" layoutX="14.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Puntuacion.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Nivel.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="456.0" layoutY="429.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="105.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/validar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="525.0" layoutY="572.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Siguiente.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="935.0" layoutY="28.0" mnemonicParsing="false" onAction="#aviso" style="-fx-background-color: #EAB543;" text="Volver" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="741.0" layoutY="321.0" prefHeight="17.0" prefWidth="174.0" text="Tiene forma redonda y cuando" />
+            <Label layoutX="741.0" layoutY="358.0" prefHeight="17.0" prefWidth="174.0" text="Entra en la red, todos gritamos" />
+            <Label layoutX="806.0" layoutY="406.0" text="¡GOOLL!" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Aviso" layoutX="362.0" layoutY="317.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #F8EFBA;" visible="false">
+         <children>
+            <Label layoutX="37.0" layoutY="4.0" text="¿Seguro que quieres ir al menu principal?">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="94.0" layoutY="46.0" mnemonicParsing="false" onAction="#siMenu" text="Si">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font></Button>
+            <Button layoutX="250.0" layoutY="46.0" mnemonicParsing="false" onAction="#NoSigue" text="No">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Idiomas1" layoutX="24.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="699.0" fitWidth="1059.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/Idiomas%20UnJugador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="835.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Player1idiomas.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="166.0" fitWidth="253.0" layoutX="14.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/puntosidioma.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="296.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/nivelidioma.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="456.0" layoutY="429.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/validaridiomas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="525.0" layoutY="572.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <image>
+                        <Image url="@../img/Siguienteidioma.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="935.0" layoutY="28.0" mnemonicParsing="false" onAction="#aviso2" style="-fx-background-color: #26de81;" text="Volver" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="213.0" fitWidth="352.0" layoutX="375.0" layoutY="-41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Idiomas.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="741.0" layoutY="412.0" prefHeight="17.0" prefWidth="167.0" text="Expresion en Ingles que se " />
+            <Label layoutX="741.0" layoutY="439.0" prefHeight="17.0" prefWidth="142.0" text="utiliza para saludar en las" />
+            <Label layoutX="741.0" layoutY="467.0" text="mañanas." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Aviso2" layoutX="372.0" layoutY="327.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #b8e994;" visible="false">
+         <children>
+            <Label layoutX="37.0" layoutY="4.0" text="¿Seguro que quieres ir al menu principal?">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="94.0" layoutY="46.0" mnemonicParsing="false" onAction="#SiSigue2" text="Si">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="250.0" layoutY="46.0" mnemonicParsing="false" onAction="#NoSigue2" text="No">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Instrucciones" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5cd79;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label layoutX="411.0" layoutY="40.0" prefHeight="56.0" prefWidth="277.0" text="Instrucciones">
+               <font>
+                  <Font name="Comic Sans MS" size="40.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="82.0" layoutY="161.0" prefHeight="414.0" prefWidth="889.0" style="-fx-background-color: #f19066;" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="161.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="23.0" prefHeight="17.0" prefWidth="857.0" text="Label" />
+               </children></AnchorPane>
+            <Button layoutX="418.0" layoutY="565.0" mnemonicParsing="false" onAction="#irMenuInstrucciones" style="-fx-background-color: #FFFffF00;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Volver.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
