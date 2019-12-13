@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxjuegohangman.FXMLDocumentController">
    <children>
-      <AnchorPane fx:id="Menu" layoutX="21.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <AnchorPane fx:id="Menu" layoutX="21.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <children>
             <ImageView fitHeight="715.0" fitWidth="1049.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <image>
@@ -40,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="462.0" layoutY="356.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+            <Button layoutX="462.0" layoutY="356.0" mnemonicParsing="false" onAction="#ModoDeJuegoMultiplayer" style="-fx-background-color: #FFFFFF00;">
                <graphic>
                   <ImageView fitHeight="174.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -178,6 +178,11 @@
             <Label layoutX="741.0" layoutY="321.0" prefHeight="17.0" prefWidth="174.0" text="Tiene forma redonda y cuando" />
             <Label layoutX="741.0" layoutY="358.0" prefHeight="17.0" prefWidth="174.0" text="Entra en la red, todos gritamos" />
             <Label layoutX="806.0" layoutY="406.0" text="¡GOOLL!" />
+            <Label layoutX="319.0" layoutY="624.0" text="1" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="36.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="Aviso" layoutX="362.0" layoutY="317.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #F8EFBA;" visible="false">
@@ -265,6 +270,11 @@
             <Label layoutX="741.0" layoutY="412.0" prefHeight="17.0" prefWidth="167.0" text="Expresion en Ingles que se " />
             <Label layoutX="741.0" layoutY="439.0" prefHeight="17.0" prefWidth="142.0" text="utiliza para saludar en las" />
             <Label layoutX="741.0" layoutY="467.0" text="mañanas." />
+            <Label layoutX="318.0" layoutY="618.0" text="1" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="36.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="Aviso2" layoutX="372.0" layoutY="327.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #b8e994;" visible="false">
@@ -289,7 +299,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="Instrucciones" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5cd79;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <AnchorPane fx:id="Instrucciones" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5cd79;" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <children>
             <Label layoutX="411.0" layoutY="40.0" prefHeight="56.0" prefWidth="277.0" text="Instrucciones">
                <font>
@@ -298,7 +308,42 @@
             </Label>
             <AnchorPane layoutX="82.0" layoutY="161.0" prefHeight="414.0" prefWidth="889.0" style="-fx-background-color: #f19066;" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="161.0">
                <children>
-                  <Label layoutX="14.0" layoutY="23.0" prefHeight="17.0" prefWidth="857.0" text="Label" />
+                  <Label layoutX="14.0" layoutY="23.0" prefHeight="17.0" prefWidth="857.0" text="Estas son las instrucciones para este HangMan, por favor presta atencion a estas intrucciones, seran importantes en el transcurso del juego.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="750.0" text="1. El jugador debe seleccionar el Modo de Juego (Deportes/Idiomas)">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="93.0" prefHeight="17.0" prefWidth="750.0" text="2. Antes de jugar debes seleccionar si vas a jugar solo o con algún amigo.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="119.0" prefHeight="17.0" prefWidth="750.0" text="3. Para cada modo de juego abran tres (3) niveles en donde el jugador debe completar si desea ganar.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="145.0" prefHeight="17.0" prefWidth="750.0" text="4. Cada jugador tendrá 100 puntos de vida.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="171.0" prefHeight="17.0" prefWidth="750.0" text="5. Si el jugador adivina una letra ganara 10 puntos.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="198.0" prefHeight="17.0" prefWidth="750.0" text="6. El jugador debe colocar la letra en el rectángulo, después apretar validar para saber si la letra es correcta o no lo es.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="225.0" prefHeight="17.0" prefWidth="750.0" text="7. Ganas si completas todos los niveles del juego.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="252.0" prefHeight="17.0" prefWidth="750.0" text="8. Se pierde si se te acaban los puntos o terminas ahorcado.">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font></Label>
                </children></AnchorPane>
             <Button layoutX="418.0" layoutY="565.0" mnemonicParsing="false" onAction="#irMenuInstrucciones" style="-fx-background-color: #FFFffF00;">
                <graphic>
@@ -311,6 +356,378 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MultijugadorMenu" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="709.0" fitWidth="1049.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/SubMenu.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="86.0" layoutY="246.0" mnemonicParsing="false" onAction="#ModoDeJuegoDeportesMultiplayer" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="197.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="644.0" layoutY="263.0" mnemonicParsing="false" onAction="#ModoDeJuegoIdiomaMultiplayer" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="215.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SubMenuidiomas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="417.0" layoutY="568.0" mnemonicParsing="false" onAction="#VolverMenu2" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Volver.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="DeportesMultipayer1" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="699.0" fitWidth="1133.0" layoutX="-45.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/DeportesDosJugadores.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="928.0" layoutY="14.0" mnemonicParsing="false" onAction="#VolverMenuDeportesMulti" prefHeight="56.0" prefWidth="65.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="83.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes%20DosJugadoresSalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="109.0" fitWidth="152.0" layoutX="45.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPlayer2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="152.0" layoutX="852.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPlayer1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPuntuacion1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="804.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPuntuacion2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="167.0" layoutX="443.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresNivel.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="438.0" layoutY="602.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="97.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes%20DosJugadoresSiguiente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="195.0" fitWidth="135.0" layoutX="60.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Untitled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="188.0" fitWidth="312.0" layoutX="783.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresAhorcado.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="306.0" fitWidth="414.0" layoutX="327.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPista.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="285.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="81.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes%20DosJugadoresValidar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="672.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="71.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Deportes%20DosJugadoresValidar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="508.0" layoutY="282.0" text="Player 1" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="472.0" layoutY="306.0" prefHeight="17.0" prefWidth="128.0" text="Expresion que se utiliza" textFill="WHITE" />
+            <Label layoutX="472.0" layoutY="325.0" prefHeight="17.0" prefWidth="123.0" text="cuando se levanta el " textFill="WHITE" />
+            <Label layoutX="472.0" layoutY="343.0" prefHeight="17.0" prefWidth="123.0" text="banderín" textFill="WHITE" />
+            <Label layoutX="507.0" layoutY="368.0" prefHeight="17.0" prefWidth="53.0" text="Player 2" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="472.0" layoutY="392.0" prefHeight="17.0" prefWidth="123.0" text="Deporte en el cual se" textFill="WHITE" />
+            <Label layoutX="472.0" layoutY="412.0" prefHeight="17.0" prefWidth="123.0" text="necesitan 6 jugadores" textFill="WHITE" />
+            <ImageView fitHeight="160.0" fitWidth="265.0" layoutX="183.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPistaPlayer2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="612.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresPistaPlayer1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AtencionMultijugador" layoutX="265.0" layoutY="302.0" prefHeight="182.0" prefWidth="589.0" style="-fx-background-color: #6a89cc;" visible="false">
+         <children>
+            <Label layoutX="22.0" layoutY="21.0" prefHeight="22.0" prefWidth="548.0" text="Antes de jugar decide con tu amigo si vas a ser el Player 1 o el Player 2" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="254.0" layoutY="120.0" mnemonicParsing="false" onAction="#cerrarAvisoMultplayer" text="Aceptar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="22.0" layoutY="49.0" prefHeight="22.0" prefWidth="548.0" text="Si ya lo tiene decidido por favor dale aceptar para comenzar a jugar..." textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="80.0" prefHeight="22.0" prefWidth="548.0" text="Tambien recuerda que este modo de juego se hacen por turnos." textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AvisoDeportesMenu" layoutX="382.0" layoutY="337.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #6a89cc;" visible="false">
+         <children>
+            <Label layoutX="37.0" layoutY="4.0" text="¿Seguro que quieres ir al menu principal?">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="94.0" layoutY="46.0" mnemonicParsing="false" onAction="#SiDeportesMenu" text="Si">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="250.0" layoutY="46.0" mnemonicParsing="false" onAction="#NoDeportesMenu" text="No">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="IdiomasMultiPlayer1" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fitHeight="739.0" fitWidth="1133.0" layoutX="-43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Idiomas%20DosJugadoresPanel.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="123.0" fitWidth="190.0" layoutX="46.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/PuntuacionIdiomaMulti2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="811.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/PuntuacionIdiomaMulti.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="182.0" fitWidth="128.0" layoutX="88.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Untitled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="176.0" fitWidth="300.0" layoutX="749.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Deportes%20DosJugadoresAhorcado.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="167.0" layoutX="830.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/IdiomasPlayer1Multi.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="162.0" layoutX="46.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/IdiomasPlayer2Multi.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="167.0" layoutX="441.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/NiveldiomaMulti.png" />
+               </image></ImageView>
+            <Button layoutX="430.0" layoutY="584.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="112.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SiguienteIdiomasMulti.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="930.0" layoutY="14.0" mnemonicParsing="false" onAction="#IralIdiomasMenu" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/SalirIdiomasMulti.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="266.0" fitWidth="375.0" layoutX="336.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/PistaIdiomaMulti.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="303.0" layoutY="195.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/IdiomasValidarMulti.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="629.0" layoutY="200.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="98.0" style="-fx-background-color: #FFFFFF00;">
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/IdiomasValidarMulti.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="230.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/IdiomasHangManMulti.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="253.0" layoutX="602.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/IdiomasHangManMulti2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="504.0" layoutY="273.0" text="Player 1" textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="292.0" prefHeight="17.0" prefWidth="112.0" text="Expresion en frances" textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="307.0" text="para saludar en las" textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="322.0" prefHeight="17.0" prefWidth="112.0" text="mañanas" textFill="WHITE" />
+            <Label layoutX="501.0" layoutY="348.0" text="Player 2" textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="367.0" prefHeight="17.0" prefWidth="112.0" text="Expresion en ingles" textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="378.0" prefHeight="17.0" prefWidth="112.0" text="para despedirse " textFill="WHITE" />
+            <Label layoutX="466.0" layoutY="391.0" prefHeight="17.0" prefWidth="112.0" text="antes de ir a dormir" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AtencionMultiIdioma" layoutX="275.0" layoutY="312.0" prefHeight="182.0" prefWidth="589.0" style="-fx-background-color: #cd84f1;" visible="false">
+         <children>
+            <Label layoutX="22.0" layoutY="21.0" prefHeight="22.0" prefWidth="548.0" text="Antes de jugar decide con tu amigo si vas a ser el Player 1 o el Player 2" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="254.0" layoutY="120.0" mnemonicParsing="false" onAction="#cerrarAvisoMultplayer" text="Aceptar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="22.0" layoutY="49.0" prefHeight="22.0" prefWidth="548.0" text="Si ya lo tiene decidido por favor dale aceptar para comenzar a jugar..." textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="80.0" prefHeight="22.0" prefWidth="548.0" text="Tambien recuerda que este modo de juego se hacen por turnos." textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AvisoIdiomaMenu" layoutX="392.0" layoutY="347.0" prefHeight="92.0" prefWidth="375.0" style="-fx-background-color: #D6A2E8;" visible="false">
+         <children>
+            <Label layoutX="37.0" layoutY="4.0" text="¿Seguro que quieres ir al menu principal?">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="94.0" layoutY="46.0" mnemonicParsing="false" onAction="#SiSigue3" text="Si">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Comic Sans MS Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="250.0" layoutY="46.0" mnemonicParsing="false" onAction="#NoSigue3" text="No">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
             </Button>
          </children>
       </AnchorPane>
